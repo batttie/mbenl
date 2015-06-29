@@ -1,18 +1,23 @@
-#description:
-# Entrance/exit scrpt
+#Description
+#Entrance/exit scrpt
 #
-# Dependencies:
-#   None
+#Dependencies:
+#None
 #
-# Configuration:
-#   None
+#Configuration:
+#None
 #
-# Commands:
-# None
+#Commands:
+#None
 #
-introReply = ["Greetings, I am the robot responsible for the care and support of the Monterey Area.  Welcome to Slack"]
 
-module.exports =(robot) ->
-robot.enter (msg) ->
-msg.reply introReply
+enterReplies = ["WELCOME TO THE THUNDERDROME", "WELCOME TO THE JUUUUUNGLLLEEEEE!"]
 
+leaveReplies = [":crying_cat_face:", ":crying_cat_face: Nooooooooo! Anything but that!", "They're dropping like FLIES!"]
+
+module.exports = (robot) ->
+  robot.enter (msg) ->
+    msg.send msg.random enterReplies
+
+  robot.leave (msg) ->
+    msg.send msg.random leaveReplies
