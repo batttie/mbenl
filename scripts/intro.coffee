@@ -18,7 +18,7 @@ leaveReplies = [":crying_cat_face:", ":crying_cat_face: Nooooooooo! Anything but
 
 module.exports = (robot) ->
   robot.enter (msg) ->
-    msg.send intro
+    msg.reply intro
 
   robot.leave (msg) ->
-    msg.send msg.random leaveReplies
+    msg.reply msg.random leaveReplies
