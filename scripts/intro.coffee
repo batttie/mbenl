@@ -20,7 +20,7 @@ leaveReplies = [":crying_cat_face:", ":crying_cat_face: Nooooooooo! Anything but
 
 module.exports = (robot) ->
   robot.enter (msg) ->
-if channel is #testing
+if channel == #testing
 msg.reply test
 else   
  msg.reply intro
