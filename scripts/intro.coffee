@@ -19,11 +19,11 @@ test = ["this is the test channell"]
 leaveReplies = [":crying_cat_face:", ":crying_cat_face: Nooooooooo! Anything but that!", "They're dropping like FLIES!"]
 
 module.exports = (robot) ->
-  robot.enter (msg) ->
+robot.enter (msg) ->
 if channel == #testing
 msg.reply test
 else   
- msg.reply intro
+msg.reply intro
 
-  robot.leave (msg) ->
-    msg.reply msg.random leaveReplies
+robot.leave (msg) ->
+msg.reply msg.random leaveReplies
