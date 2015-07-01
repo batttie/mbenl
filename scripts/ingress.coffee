@@ -22,9 +22,9 @@
 #
 #http://ingress.wikia.com/api/v1/Articles/List?limit=1000
 
- json == JSON.parse(/ingresswiki.json)
+ json == JSON.parse(./data/ingresswiki.json)
  id == "#{json.id}"
- title = "#{json.title}" 
+ title == "#{json.title}" 
 
 
  module.exports = (robot) ->
