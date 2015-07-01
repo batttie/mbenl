@@ -28,8 +28,8 @@
 
 
  module.exports = (robot) ->
-  robot.hear /!iw (.*)/i (msg) ->
- term = msg.match(1)
+  robot.hear /!iw (.*)/i, (msg) ->
+ term = msg.match([1])
  if term = title
   msg.reply id
  else
