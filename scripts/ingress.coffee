@@ -33,7 +33,7 @@
  if term = title
   msg.reply id
  else
-  item not found
+   msg.reply "item not found"
 
   
 
