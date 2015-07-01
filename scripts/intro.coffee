@@ -20,7 +20,7 @@ leaveReplies = [":crying_cat_face:", ":crying_cat_face: Nooooooooo! Anything but
 
 module.exports = (robot) ->
  robot.enter (msg) ->
-  if room == #testing
+  if user.room == #testing
    msg.reply test
   else   
    msg.reply intro
