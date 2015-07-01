@@ -16,7 +16,7 @@
  module.exports = (robot) ->
   robot.http("http://ingress.wikia.com/api/v1/Articles/List?limit=1000")
    .header('accept','json')
-   .get()(err,res,body) ->
+   .get()(res,body) ->
    wiki = JSON.parse body
 
   robot.brain.set 'wiki'
