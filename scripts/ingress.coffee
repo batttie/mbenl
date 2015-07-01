@@ -16,15 +16,15 @@
 #   .header('accept','application/json')
 #   .get()(body) ->
 #
-#   wiki = JSON.parse body
+#   wiki == JSON.parse body
 #
 #  robot.brain.set 'wiki'
 #
 #http://ingress.wikia.com/api/v1/Articles/List?limit=1000
 
- json = JSON.parse(/ingresswiki.json)
- id = #{json.id}
- title = #{json.title} 
+ json == JSON.parse(/ingresswiki.json)
+ id == "#{json.id}"
+ title = "#{json.title}" 
 
 
  module.exports = (robot) ->
