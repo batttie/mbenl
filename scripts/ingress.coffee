@@ -30,8 +30,8 @@
  module.exports = (robot) ->
   robot.respond /!iw (.*)/i, (msg) ->
  
- deftype = msg.match[1]
- if deftype  = title
+ deftype = escape(match[1])
+ if deftype = title
   msg.send #{id}
  else
    msg.reply "item not found"
