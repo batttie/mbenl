@@ -28,7 +28,7 @@
  vi = "hi"
 
  module.exports = (robot) ->
-  robot.respond /!iw (.*)/i, (msg) ->\
+  robot.hear/!iw (.*)/i, (msg) ->\
    defname = escape(msg.match[1])
    if defname = title
     msg.send #{id}
