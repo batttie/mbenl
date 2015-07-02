@@ -28,13 +28,12 @@
  vi = "hi"
 
  module.exports = (robot) ->
-  robot.respond /!iw (.*)/i, (msg) ->
- 
- deftype = escape(match[1])
- if deftype = title
-  msg.send #{id}
- else
-   msg.reply "item not found"
+  robot.respond /!iw (.*)/i, (msg) ->\
+   defname = escape(match[1])
+   if defname = title
+    msg.send #{id}
+   else
+    msg.reply "item not found"
 
   
 
