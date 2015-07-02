@@ -29,7 +29,7 @@
 
  module.exports = (robot) ->
   robot.respond /!iw (.*)/i, (msg) ->\
-   defname = escape(match[1])
+   defname = escape(msg.match[1])
    if defname = title
     msg.send #{id}
    else
