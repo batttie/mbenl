@@ -30,7 +30,7 @@
  module.exports = (robot) ->
   robot.respond /!iw (.*)/i, (msg) ->
  
- deftype = msg.match(1)
+ deftype = msg.match[1]
  if deftype  = title
   msg.send #{id}
  else
