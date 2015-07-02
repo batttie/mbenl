@@ -32,7 +32,7 @@
  
  term = msg.match([1])
  if term = title
-  msg.send msg.id
+  msg.send id
  else
    msg.reply "item not found"
 
