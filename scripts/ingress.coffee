@@ -28,13 +28,13 @@
  vi = "hi"
 
  module.exports = (robot) ->
-  robot.hear /!iw/i, (msg) ->
-   msg.reply vi
-# term = msg.match([1])
-# if term = title
-#  msg.send msg.id
-# else
-#   msg.reply "item not found"
+  robot.hear /!iw (.*)/i, (msg) ->
+ 
+ term = msg.match([1])
+ if term = title
+  msg.send msg.id
+ else
+   msg.reply "item not found"
 
   
 
