@@ -22,9 +22,9 @@
 #
 #http://ingress.wikia.com/api/v1/Articles/List?limit=1000
 
- json = require('./ingresswikia.json');
- id == "#{json.id}";
- title == "#{json.title}"; 
+ json = require './ingresswikia.json'
+ id == "#{json.id}"
+ title == "#{json.title}"
 
 
  module.exports = (robot) ->
