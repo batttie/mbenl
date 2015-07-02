@@ -22,7 +22,7 @@
 #
 #http://ingress.wikia.com/api/v1/Articles/List?limit=1000
 
- json = require('./data/ingresswikia.json')
+ json = require('/app/data/ingresswikia.json')
  id == "#{json.id}"
  title == "#{json.title}" 
 
