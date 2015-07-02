@@ -35,7 +35,7 @@
    else
     msg.reply "item not found"
 
-   robot.hear /!test (.*)/i, (msg) ->  
-    test  = escape(msg.match[1])
-    msg.reply "i hear you #{test}"
+  robot.hear /!test (.*)/i, (msg) ->  
+   test  = escape(msg.match[1])
+   msg.reply "i hear you #{test}"
 
