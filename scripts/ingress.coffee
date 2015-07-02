@@ -30,7 +30,7 @@
  module.exports = (robot) ->
   robot.hear /!iw (.*)/i, (msg) ->
  
- term = msg.match([1])
+ term = res.match([1])
  if term = title
   msg.send id
  else
