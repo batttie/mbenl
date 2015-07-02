@@ -38,4 +38,3 @@
   robot.hear /!test (.*)/i, (msg) ->  
    test  = escape(msg.match[1])
    msg.reply "i hear you #{test}"
-
