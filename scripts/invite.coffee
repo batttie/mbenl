@@ -10,15 +10,16 @@ module.exports = (robot) ->
    data = JSON.stringify( 
     email: '#{useremail}',
     token: '#{slacktoken}',
-    set_active: true)  
-   msg.http("https://"+ team + "/api/users.admin.invite")
-     .post(data) (err,res,body) ->
-      if err
-       msg.send "encountered error #{err}"
-       body = JSON.parse(body)
-      if body.ok
-       msg.send "Success, invite sent to #{usermail}"
-      else
-       msg.send "failed!" + body.error
-      msg.status(400).send "email is required"
- 
+    set_active: true)
+   http = "https://" + team + "/api/users.admin.invite"  
+#   msg.http("https://"+ team + "/api/users.admin.invite")
+#     .post(data) (err,res,body) ->
+#      if err
+#       msg.send "encountered error #{err}"
+#       body = JSON.parse(body)
+#      if body.ok
+#       msg.send "Success, invite sent to #{usermail}"
+#      else
+#       msg.send "failed!" + body.error
+#      msg.res(400).send "email is required"
+  msg.send http  
