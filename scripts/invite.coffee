@@ -20,5 +20,5 @@ module.exports = (robot) ->
        res.send "Success, invite sent to #{usermail}"
       else
        res.send "failed!" + body.error
-       res.status(400).send "email is required"
+      res.status(400).send "email is required"
  
