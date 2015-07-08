@@ -11,7 +11,7 @@ module.exports = (robot) ->
     email: '#{useremail}',
     token: '#{slacktoken}',
     set_active: true)  
-   robot.http("https://"+ team + "/api/users.admin.invite")
+   msg.http("https://"+ team + "/api/users.admin.invite")
      .post(data) (err,res,body) ->
       if err
        msg.send "encountered error #{err}"
