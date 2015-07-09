@@ -6,7 +6,8 @@ team = process.env.HUBOT_SLACK_TEAM_URL
 
 module.exports = (robot) ->
  robot.hear /invite (.*)/i, (msg) ->
-   useremail = msg.match[1]
+   useremailraw = msg.match[1]
+   useremail = useremailraw.replace(/m.*\|/gi, "")
    data = "email=#{useremail}&token=#{slacktoken}&set_active=true" 
 #    email: '#{useremail}',
 #    token: '#{slacktoken}',
