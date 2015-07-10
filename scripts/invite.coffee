@@ -15,7 +15,7 @@ module.exports = (robot) ->
    http = "https://" + team + "/api/users.admin.invite"  
    robot.http (http)
  #   .header ('Content-Type' 'application/json')
-    .post(data) (err,res,body) ->
+    .post (data) (err,res,body) ->
       if err
        msg.send "encountered error #{err}"
        body = JSON.parse(body)
