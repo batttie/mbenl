@@ -13,7 +13,7 @@ module.exports = (robot) ->
 #    token: '#{slacktoken}',
 #    set_active: true)
    http = "https://" + team + "/api/users.admin.invite"  
-   robot.http(http)
+   robot.http (http)
     .header('Content-Type', 'application/json')
     .post(data) (err,res,body) ->
       if err
