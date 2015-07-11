@@ -56,14 +56,14 @@ module.exports = (robot) ->
  robot.hear /ti/i, (msg) ->
    msg.http("https://enl-monterey.slack.com/api/users.admin.invite")
      .post(form:
-      email : "ttt@tt.com"
-      token : "xoxp-2886416911-2972267541-6905744660-12b73a"
-      set_active : "true") (err, httpResponse, body) ->
-       if err
-        msg.send "encountered error #{err}"
+      email : 'ttt@tt.com'
+      token : 'xoxp-2886416911-2887186437-3006751783-e2deb0'   
+      set_active : 'true') (error, response, body) ->
+        if error
+         msg.send "encountered error #{err}"
         body = JSON.parse(body)
-       if body.ok
-        msg.send "Success, invite sent to #{usermail}"
-       else
-        msg.send "failed!" + body.error
-       msg.res(400).send "email is required"
+        if body.ok
+         msg.send "Success, invite sent to #{usermail}"
+        else
+         msg.send "failed!" + body.error
+# console.log msg   
