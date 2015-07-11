@@ -58,4 +58,12 @@ module.exports = (robot) ->
      .post(form:
       email : "ttt@tt.com"
       token : "xoxp-2886416911-2972267541-6905744660-12b73a"
-      set_active : "true")
+      set_active : "true") (err, httpResponse, body) ->
+       if err
+        msg.send "encountered error #{err}"
+        body = JSON.parse(body)
+       if body.ok
+        msg.send "Success, invite sent to #{usermail}"
+       else
+        msg.send "failed!" + body.error
+       msg.res(400).send "email is required"
