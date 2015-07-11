@@ -1,9 +1,9 @@
 #
 #
 #
-slacktoken = process.env.HUBOT_SLACK_TOKEN
-team = process.env.HUBOT_SLACK_TEAM_URL
-
+#slacktoken = process.env.HUBOT_SLACK_TOKEN
+#team = process.env.HUBOT_SLACK_TEAM_URL
+#
 #module.exports = (robot) ->
 # robot.hear /invite (.*)/i, (msg) ->
 #   useremailraw = msg.match[1]
@@ -25,29 +25,37 @@ team = process.env.HUBOT_SLACK_TEAM_URL
 #      else
 #       msg.send "failed!" + body.error
 #      msg.res(400).send "email is required"
-
+#
 #request = require('request')
-
-addSlackMember = (options, callback) ->
-  email = options.email
-  time = (new Date).getTime()
-  slack_team = options.team
-  authToken = options.token
-  inviteUrl = 'https://' + slack_team + '.slack.com/api/users.admin.invite?t=' + time
-  request.post inviteUrl, { form:
-    email: email
-    channels: autojoinChannels
-    token: authToken
-    set_active: true
-    _attempts: 1 }, (err, httpResponse, body) ->
-    callback httpResponse
-    return
-  return
-
-module.exports = addSlackMember
-
+#
+#addSlackMember = (options, callback) ->
+#  email = options.email
+#  time = (new Date).getTime()
+#  slack_team = options.team
+#  authToken = options.token
+#  inviteUrl = 'https://' + slack_team + '.slack.com/api/users.admin.invite?t=' + time
+#  request.post inviteUrl, { form:
+#    email: email
+#    channels: autojoinChannels
+#    token: authToken
+#    set_active: true
+#    _attempts: 1 }, (err, httpResponse, body) ->
+#    callback httpResponse
+#    return
+#  return
+#
+#module.exports = addSlackMember
+#
+#module.exports = (robot) ->
+# robot.hear /invite (.*)/i, (msg) ->
+#   useremailraw = msg.match[1]
+#   email = useremailraw.replace(/m.*\|/gi, "")
+#
+# addSlackMember.http() ->
 module.exports = (robot) ->
- robot.hear /invite (.*)/i, (msg) ->
-   useremailraw = msg.match[1]
-   email = useremailraw.replace(/m.*\|/gi, "")
-
+ robot.hear /ti/i, (msg) ->
+   msg.http("https://enl-monterey.slack.com/api/users.admin.invite")
+     .post(form:
+      email : "ttt@tt.com"
+      token : "xoxp-2886416911-2972267541-6905744660-12b73a"
+      set_active : "true")
