@@ -12,4 +12,4 @@ module.exports = (robot) ->
   unknown = res.match[1]
   if unknown = "OA"
     message = "/portal show all OA"
-  res.send message
+   res.send message
