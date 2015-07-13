@@ -9,7 +9,7 @@
 
 module.exports = (robot) ->
   robot.hear /what is (.*)/i, (res) ->
-  unknown = res.match[1]
-  if unknown = "OA"
-    message = "/portal show all OA"
+   unknown = res.match[1]
+   if unknown = "OA"
+     message = "/portal show all OA"
    res.send message
