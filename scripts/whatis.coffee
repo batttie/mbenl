@@ -1,7 +1,14 @@
+# Description:
+#   What is (X)
 #
-#what is
-#Description
-#common questsions regarding monterey specific ingress terms
+# Notes:
+#   This is to help new people understand our strange terminology in monterey ingress.
 #
-modules.export ->
- 
+# Commands:
+#whatis 
+
+module.exports = (robot) ->
+ robot.hear/what is (.*)/i, (msg)
+ unknown = msg.match ([1])
+  if unknown = "OA"
+    msg.send "/portal show all OA"
