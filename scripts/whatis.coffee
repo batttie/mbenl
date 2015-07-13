@@ -8,8 +8,8 @@
 #whatis 
 
 module.exports = (robot) ->
-  robot.hear /what is (.*)/i, (msg) ->
-  unknown = msg.match ([1])
+  robot.hear /what is (.*)/i, (res) ->
+  unknown = res.match[1]
   if unknown = "OA"
     message = "/portal show all OA"
-  msg.send message
+  res.send message
