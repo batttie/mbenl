@@ -18,5 +18,5 @@ module.exports = (robot) ->
     channel = "C03DQDDSK"
     res.http("https://slack.com/api/channels.kick?token=#{token}&channel=#{channel}&user=U08QUP59C&pretty=1")
     .post() (body) ->
-    data = JSON.parse body
+     data = JSON.parse body
     res.send "#{data} Purge done"
