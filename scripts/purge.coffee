@@ -16,7 +16,20 @@ module.exports = (robot) ->
   robot.hear /purge the room/i, (msg) ->
     token = process.env.HUBOT_SLACK_TOKEN
     channel = "C03DQDDSK"
-    users = ["U06N0L8PQ","U08QUP59C"]
+    users = [
+                "U02S35GCV",
+                "U02S3BDRV",
+                "U02UL7VF4",
+                "U03B4HGHZ",
+                "U03EJKJBC",
+                "U0402BEPV",
+                "U046260C5",
+                "U046WSW3Z",
+                "U06N0L8PQ",
+                "U07K9JGAV",
+                "U08QUP59C",
+                "U09KB85QA"
+            ]
     user = ""
     total = users.length
     num = -1
