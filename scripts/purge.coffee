@@ -20,7 +20,7 @@ module.exports = (robot) ->
     user = ""
     total = users.total
     num = -1
-    while total - 1 > n
+    while total - 1 > num
      num = num + 1
      user = users[num]
      msg.http("https://slack.com/api/channels.kick?token=#{token}&channel=#{channel}&user=#{user}&pretty=1")
