@@ -19,10 +19,10 @@ module.exports = (robot) ->
     users = ["U06N0L8PQ","U08QUP59C"]
     user = ""
     total = users.total
-    n = -1
+    num = -1
     while total - 1 > n
-     n = n + 1
-     user = users[n]
+     num = num + 1
+     user = users[num]
      msg.http("https://slack.com/api/channels.kick?token=#{token}&channel=#{channel}&user=#{user}&pretty=1")
      .post() (err,res,body) ->
       data = JSON.parse body
