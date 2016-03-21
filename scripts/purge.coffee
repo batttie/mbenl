@@ -18,7 +18,7 @@ module.exports = (robot) ->
     channel = "C03DQDDSK"
     users = ["U06N0L8PQ","U08QUP59C"]
     user = ""
-    total = users.lenght
+    total = users.length
     num = -1
     msg.send total
     while total - 1 > num
