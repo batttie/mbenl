@@ -17,6 +17,6 @@ module.exports = (robot) ->
     token = process.env.HUBOT_SLACK_TOKEN
     channel = "C03DQDDSK"
     res.http("https://slack.com/api/channels.kick?token=#{token}&channel=#{channel}&user=U08QUP59C&pretty=1")
-    .get() (body) ->
+    .post() (body) ->
     data = JSON.parse body
     res.send "#{data} Purge done"
