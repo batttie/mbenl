@@ -17,6 +17,7 @@ module.exports = (robot) ->
     token = process.env.HUBOT_SLACK_TOKEN
     channel = "C03DQDDSK"
     users = ["U06N0L8PQ","U08QUP59C"]
+    user = ""
     total = users.total
     n = -1
     while total - 1 > n
