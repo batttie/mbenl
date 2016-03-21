@@ -20,6 +20,7 @@ module.exports = (robot) ->
     user = ""
     total = users.total
     num = -1
+    msg.send total
     while total - 1 > num
      num = num + 1
      user = users[num]
